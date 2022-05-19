@@ -40,18 +40,23 @@
 html,
 body {
   overflow-x: hidden;
+  width: 100vw;
+  max-width: 100%;
 }
 
 body {
+  position: relative;
   box-sizing: border-box;
   background-color: var(--background);
   font-family: "Overpass";
   line-height: 1;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .no-scroll {
   overflow: hidden;
+  max-height: 100vh;
 }
 
 /* Sections */
