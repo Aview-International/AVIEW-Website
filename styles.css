@@ -43,6 +43,7 @@ body {
   background-color: var(--background);
   font-family: "Overpass";
   line-height: 1;
+  overflow-x: hidden;
 }
 
 .no-scroll {
