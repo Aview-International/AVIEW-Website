@@ -37,13 +37,17 @@
   vertical-align: baseline;
 }
 
+html,
 body {
-  display: relative;
+  overflow-x: hidden;
+}
+
+body {
   box-sizing: border-box;
   background-color: var(--background);
   font-family: "Overpass";
   line-height: 1;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .no-scroll {
