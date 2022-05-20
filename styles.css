@@ -480,7 +480,7 @@ section:not(:last-of-type) {
   }
 
   .m-stats {
-    max-width: min(400px, 90%);
+    max-width: min(90%, 360px);
     margin: 0 auto;
   }
 
