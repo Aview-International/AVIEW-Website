@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;700&display=swap");
 
 :root {
-  --background: #090c32;
+  --background: #000017;
   --black: #000017;
   --purple: #fc00ff;
   --gradient: linear-gradient(131.68deg, #fc00ff 10.68%, #00fffc 85.93%);
@@ -119,6 +119,12 @@ section:not(:last-of-type) {
   border-radius: 100px;
   padding: 15px 38px 12px;
   display: inline-block;
+  position: relative;
+}
+
+.btn-primary:hover .shadow,
+.btn-secondary:hover .shadow {
+  opacity: 0.7;
 }
 
 .btn-primary {
@@ -298,7 +304,7 @@ section:not(:last-of-type) {
   position: relative;
 }
 
-.card__shadow {
+.shadow {
   z-index: -1;
   background: var(--hover-shadow-gradient);
   transform: scale(1.02);
@@ -313,7 +319,7 @@ section:not(:last-of-type) {
   bottom: 0;
 }
 
-.card:hover .card__shadow {
+.card:hover .shadow {
   opacity: 0.6;
 }
 
@@ -387,6 +393,10 @@ section:not(:last-of-type) {
     grid-column-start: auto;
     grid-column-end: auto;
     max-width: min(90%, 360px);
+  }
+
+  .card:hover .card__gradient {
+    opacity: 0;
   }
 
   .card__text {

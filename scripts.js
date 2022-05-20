@@ -33,36 +33,44 @@ window.addEventListener("resize", () => {
 });
 
 // Stat counters
-const stats = document.getElementById("stats");
-const bounding = stats.getBoundingClientRect();
-const statsHeight = stats.offsetHeight;
-const statsWidth = stats.offsetWidth;
-const counters = document.querySelectorAll(".count");
-const speeds = [100, 15, 10];
-const timeouts = [20, 150, 240];
+const pageWidth = window.innerWidth > 0 ? window.innerWidth : screen.width;
 
-if (
-  bounding.top >= -statsHeight &&
-  bounding.left >= -statsWidth &&
-  bounding.right <=
-    (window.innerWidth || document.documentElement.clientWidth) + statsWidth &&
-  bounding.bottom <=
-    (window.innerHeight || document.documentElement.clientHeight) + statsHeight
-) {
-  counters.forEach((counter, i) => {
-    const updateCount = () => {
-      const target = parseInt(counter.getAttribute("data-target"));
-      const suffix = counter.getAttribute("data-suffix");
-      const count = parseInt(counter.innerText.slice(0, -suffix.length));
-      const increment = Math.trunc(target / speeds[i]);
+if (pageWidth > 768) {
+  const stats = document.getElementById("stats");
+  const bounding = stats.getBoundingClientRect();
+  const statsHeight = stats.offsetHeight;
+  const statsWidth = stats.offsetWidth;
+  const counters = document.querySelectorAll(".count");
+  const speeds = [100, 15, 10];
+  const timeouts = [20, 150, 240];
+  if (
+    bounding.top >= -statsHeight &&
+    bounding.left >= -statsWidth &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth) +
+        statsWidth &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) +
+        statsHeight
+  ) {
+    let values = [0, 0, 0];
+    counters.forEach((counter, i) => {
+      const updateCount = () => {
+        const target = parseInt(counter.getAttribute("data-target"));
+        const suffix = counter.getAttribute("data-suffix");
+        let count = values[i];
+        const increment = Math.trunc(target / speeds[i]);
 
-      if (count < target) {
-        counter.innerText = (count + increment).toString() + suffix;
-        setTimeout(updateCount, timeouts[i]);
-      } else {
-        counter.innerText = target + suffix;
-      }
-    };
-    updateCount();
-  });
+        if (count < target) {
+          count += increment;
+          values[i] = count;
+          counter.innerText = count.toString() + suffix;
+          setTimeout(updateCount, timeouts[i]);
+        } else {
+          counter.innerText = target + suffix;
+        }
+      };
+      updateCount();
+    });
+  }
 }
