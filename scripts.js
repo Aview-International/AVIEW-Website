@@ -25,13 +25,6 @@ closeBtn.addEventListener("click", () => {
   toggleMenu();
 });
 
-window.addEventListener("resize", () => {
-  document.body.classList.remove("no-scroll");
-  navbar.classList.remove("navbar-open");
-  closeBtn.classList.remove("close-btn-open");
-  setViewportHeight();
-});
-
 // Stat counters
 const pageWidth = window.innerWidth > 0 ? window.innerWidth : screen.width;
 
@@ -74,3 +67,22 @@ if (pageWidth > 768) {
     });
   }
 }
+
+// Translated Content Widths
+let videos = document.querySelectorAll(".videos__video");
+function setVideosWidth() {
+  width = videos[0].offsetWidth;
+  videos.forEach((video) => {
+    height = width * 0.56;
+    video.style.height = height.toString() + "px";
+  });
+}
+setVideosWidth();
+
+window.addEventListener("resize", () => {
+  document.body.classList.remove("no-scroll");
+  navbar.classList.remove("navbar-open");
+  closeBtn.classList.remove("close-btn-open");
+  setViewportHeight();
+  setVideosWidth();
+});
