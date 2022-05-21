@@ -726,11 +726,218 @@ p.label {
 }
 
 .generate-aview .btn-secondary {
-  margin: 0 auto;
+  margin: 105px auto 0;
   display: inline-block;
 }
 
+.checkbox_label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 30px 0 10px 0;
+  padding-left: 15px;
+  color: var(--white);
+}
+.checkbox_label img {
+  margin-left: 20px;
+}
+.checkbox_label input {
+  margin-right: 20px;
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+.checkbox_span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0px;
+  left: 0px;
+  border: 1px solid #fff;
+}
+.checkbox_span:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: -1px;
+  top: -1px;
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(90deg, #f804ff 0%, #00fffc 100%);
+}
+.checkbox_span span {
+  background: linear-gradient(90deg, #f804ff 0%, #00fffc 100%);
+  border: 1px solid #090c32;
+  width: 16px;
+  height: 16px;
+  z-index: 10;
+  display: none;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+.checkbox_label input:checked ~ .checkbox_span:after,
+.checkbox_label input:checked ~ .checkbox_span span {
+  display: block;
+}
+
+.mt-bg {
+  margin-top: 5rem;
+}
+.mb-bg {
+  margin-bottom: 5rem;
+}
+.mt-md {
+  margin-top: 2.8rem;
+}
+.mb-md {
+  margin-bottom: 2.8rem;
+}
+.mt-sm {
+  margin-top: 1.5rem;
+}
+.mb-sm {
+  margin-bottom: 1.5rem;
+}
+.colored_text {
+  /* Fallback: Set a font color for incompatible browsers. */
+  color: #ff00ff;
+  background-image: linear-gradient(89.92deg, #ff00ff 0.09%, #00ffff 101.47%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.flex {
+  display: flex;
+}
+.center_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center_absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn1,
+.btn2 {
+  transition: all 1.5s ease-in-out;
+  border: none;
+}
+.btn2 {
+  width: 160px;
+  padding: 3px;
+  margin: auto;
+  border-radius: 50px;
+  background: linear-gradient(93.07deg, #fc00ff 0.64%, #00fffc 102.01%);
+}
+.btn2:hover {
+  background: linear-gradient(93.07deg, #00fffc 0.64%, #fc00ff 102.01%);
+}
+
+.btn2 button {
+  border: none;
+  background: #090c32;
+}
+.btn3 {
+  border: 1px solid #fff;
+  background: transparent;
+}
+/* horizontal line */
+.horizontal_line {
+  display: block;
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(150deg, #fc00ff 0%, #00fffc 94.7%);
+}
+.major_line {
+  margin: 5rem auto 3rem auto;
+}
+.minor_line {
+  margin: 0.8rem auto;
+}
 /* FAQ */
+.faq .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.faq .section-description {
+  margin-bottom: 80px;
+}
+.faq > p {
+  text-align: center;
+}
+.minus_sign {
+  display: none;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+.plus_sign {
+  position: relative;
+  width: 25px;
+  display: inline-block;
+}
+.plus_sign span:first-of-type {
+  display: inline-block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+.plus_sign span:last-of-type {
+  display: inline-block;
+  width: 3px;
+  height: 25px;
+  background-color: #fff;
+}
+.questions_label {
+  display: block;
+  width: 70%;
+  margin: auto;
+  cursor: pointer;
+  color: var(--white);
+}
+.questions_container {
+  transition: height 0.3s ease-in-out;
+  height: 2rem;
+}
+.questions_label p {
+  transition: all 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  padding: 30px 0;
+  color: var(--white);
+}
+.questions_label input {
+  display: none;
+}
+.questions_label input:checked + .questions_container .plus_sign {
+  display: none;
+}
+.questions_label input:checked + .questions_container .minus_sign {
+  display: inline-block;
+}
+.questions_label input:checked ~ .questions_container p {
+  visibility: visible;
+  opacity: 1;
+  display: inline-block;
+}
+.questions_label input:checked ~ .questions_container {
+  height: 8rem;
+}
+.questions_container > div {
+  justify-content: space-between;
+  align-items: center;
+}
+.questions_container h4 {
+  font-size: 24px;
+  margin: 0;
+}
 
 /* Want To Go Global */
 .go-global {
