@@ -3,6 +3,7 @@
 :root {
   --background: #000017;
   --black: #000017;
+  --dark-blue: #090c32;
   --purple: #fc00ff;
   --gradient: linear-gradient(131.68deg, #fc00ff 10.68%, #00fffc 85.93%);
   --card-fill-gradient: linear-gradient(
@@ -679,6 +680,58 @@ section:not(:last-of-type) {
   }
 }
 
+/* Start Generating AVIEW Today! */
+.generate-aview {
+  text-align: center;
+}
+
+.generate-aview .section-title {
+  margin-bottom: 60px;
+}
+
+.generate-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.label {
+  color: var(--white);
+  font-size: 21px;
+  margin-bottom: 13px;
+  display: block;
+  text-align: left;
+}
+
+p.label {
+  margin-bottom: 28px;
+}
+
+.input {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  padding: 8px 15px 7px;
+  font-size: 21px;
+}
+
+.generate-aview .input {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.generate-aview .input-border {
+  margin-bottom: 40px;
+  background: var(--gradient);
+}
+
+.generate-aview .btn-secondary {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* FAQ */
+
 /* Want To Go Global */
 .go-global {
   background: var(--gradient);
@@ -706,12 +759,8 @@ section:not(:last-of-type) {
   width: 90%;
 }
 
-.go-global__input {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  padding: 8px 15px 7px;
+.go-global .input {
+  background-color: var(--white);
 }
 
 .go-global__policy {
