@@ -211,6 +211,7 @@ section:not(:last-of-type) {
     transform: translateX(100%);
     transition: all 0.6s cubic-bezier(0.5, 0, 0, 0.75);
     opacity: 0;
+    z-index: 10;
   }
 
   .navbar-open {
@@ -266,6 +267,7 @@ section:not(:last-of-type) {
     transition: all 0.6s cubic-bezier(0.5, 0, 0, 0.75);
     pointer-events: none;
     cursor: pointer;
+    z-index: 20;
   }
 
   .close-btn-open {
