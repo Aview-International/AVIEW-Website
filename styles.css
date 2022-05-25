@@ -702,6 +702,7 @@ section:not(:last-of-type) {
   margin-bottom: 13px;
   display: block;
   text-align: left;
+  line-height: 27px;
 }
 
 p.label {
@@ -805,6 +806,12 @@ p.label {
 
 .minor_line {
   margin: 0.8rem auto;
+}
+
+@media (max-width: 768px) {
+  .generate-aview .section-title {
+    margin-bottom: 50px;
+  }
 }
 
 /* FAQ */
