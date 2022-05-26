@@ -124,6 +124,7 @@ section:not(:last-of-type) {
   padding: 15px 38px 12px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .btn-primary:hover .shadow,
@@ -823,6 +824,10 @@ p.label {
 }
 
 /* FAQ */
+.hidden {
+  display: none;
+}
+
 .faq .section-title {
   text-align: center;
   margin-bottom: 10px;
