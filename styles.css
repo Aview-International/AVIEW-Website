@@ -37,6 +37,7 @@
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -52,7 +53,6 @@ body {
   background-color: var(--background);
   font-family: "Overpass";
   line-height: 1;
-  scroll-behavior: smooth;
   overflow: hidden;
 }
 
@@ -68,13 +68,17 @@ body {
   margin: 0 auto;
 }
 
+section:not(:first-of-type) {
+  padding-top: 60px;
+}
+
 section:not(:last-of-type) {
-  margin-bottom: 190px;
+  margin-bottom: 130px;
 }
 
 @media (max-width: 768px) {
   section:not(:last-of-type) {
-    margin-bottom: 150px;
+    margin-bottom: 90px;
   }
 }
 
@@ -720,7 +724,7 @@ p.label {
 }
 
 .generate-aview .input {
-  background-color: var(--dark-blue);
+  background-color: var(--black);
   color: var(--white);
 }
 
@@ -774,7 +778,7 @@ p.label {
 }
 .checkbox_span span {
   background: linear-gradient(90deg, #f804ff 0%, #00fffc 100%);
-  border: 1px solid #090c32;
+  border: 1px solid #000017;
   width: 16px;
   height: 16px;
   z-index: 10;
