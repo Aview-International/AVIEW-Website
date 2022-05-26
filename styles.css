@@ -800,7 +800,7 @@ p.label {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* horizontal line */
+
 .horizontal_line {
   display: block;
   width: 80%;
@@ -816,6 +816,10 @@ p.label {
   .generate-aview .section-title {
     margin-bottom: 50px;
   }
+
+  .generate-aview .btn-secondary {
+    margin: 61px auto 0;
+  }
 }
 
 /* FAQ */
@@ -823,42 +827,45 @@ p.label {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .faq .section-description {
   margin-bottom: 80px;
-}
-.faq p {
-  font-size: 18px;
-}
-.faq > p {
+  font-size: 21px;
   text-align: center;
 }
+
 .faq a {
   color: #fff;
   text-decoration: none;
 }
+
 .minus_sign {
   display: none;
   width: 25px;
   height: 3px;
   background-color: #fff;
 }
+
 .plus_sign {
   position: relative;
   width: 25px;
   display: inline-block;
 }
+
 .plus_sign span:first-of-type {
   display: inline-block;
   width: 25px;
   height: 3px;
   background-color: #fff;
 }
+
 .plus_sign span:last-of-type {
   display: inline-block;
   width: 3px;
   height: 25px;
   background-color: #fff;
 }
+
 .questions_label {
   display: block;
   width: 70%;
@@ -866,41 +873,58 @@ p.label {
   cursor: pointer;
   color: var(--white);
 }
+
 .questions_container {
   transition: height 0.3s ease-in-out;
   height: 1.4rem;
 }
+
 .questions_label p {
   transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
   padding: 30px 0;
   color: var(--white);
+  font-size: 18px;
+  line-height: 23px;
 }
+
 .questions_label input {
   display: none;
 }
+
 .questions_label input:checked + .questions_container .plus_sign {
   display: none;
 }
+
 .questions_label input:checked + .questions_container .minus_sign {
   display: inline-block;
 }
+
 .questions_label input:checked ~ .questions_container p {
   visibility: visible;
   opacity: 1;
   display: inline-block;
 }
+
 .questions_label input:checked ~ .questions_container {
-  height: 8rem;
+  height: 9rem;
 }
+
 .questions_container > div {
   justify-content: space-between;
   align-items: center;
 }
+
 .questions_container h4 {
   font-size: 24px;
   margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faq .section-description {
+    font-size: 18px;
+  }
 }
 
 /* Want To Go Global */
