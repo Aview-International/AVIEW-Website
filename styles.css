@@ -37,6 +37,7 @@
   font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -52,7 +53,6 @@ body {
   background-color: var(--background);
   font-family: "Overpass";
   line-height: 1;
-  scroll-behavior: smooth;
   overflow: hidden;
 }
 
@@ -68,13 +68,17 @@ body {
   margin: 0 auto;
 }
 
+section:not(:first-of-type) {
+  padding-top: 60px;
+}
+
 section:not(:last-of-type) {
-  margin-bottom: 190px;
+  margin-bottom: 130px;
 }
 
 @media (max-width: 768px) {
   section:not(:last-of-type) {
-    margin-bottom: 150px;
+    margin-bottom: 90px;
   }
 }
 
@@ -124,6 +128,7 @@ section:not(:last-of-type) {
   padding: 15px 38px 12px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .btn-primary:hover .shadow,
@@ -724,7 +729,7 @@ p.label {
 }
 
 .generate-aview .input {
-  background-color: var(--dark-blue);
+  background-color: var(--black);
   color: var(--white);
 }
 
@@ -778,7 +783,7 @@ p.label {
 }
 .checkbox_span span {
   background: linear-gradient(90deg, #f804ff 0%, #00fffc 100%);
-  border: 1px solid #090c32;
+  border: 1px solid #000017;
   width: 16px;
   height: 16px;
   z-index: 10;
@@ -805,7 +810,7 @@ p.label {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-/* horizontal line */
+
 .horizontal_line {
   display: block;
   width: 80%;
@@ -824,49 +829,59 @@ p.label {
   .horizontal_line {
     width: 95%;
   }
+  .generate-aview .btn-secondary {
+    margin: 61px auto 0;
+  }
 }
 
 /* FAQ */
+.hidden {
+  display: none;
+}
+
 .faq .section-title {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .faq .section-description {
   margin-bottom: 80px;
-}
-.faq p {
-  font-size: 18px;
-}
-.faq > p {
+  font-size: 21px;
   text-align: center;
 }
+
 .faq a {
   color: #fff;
   text-decoration: none;
 }
+
 .minus_sign {
   display: none;
   width: 25px;
   height: 3px;
   background-color: #fff;
 }
+
 .plus_sign {
   position: relative;
   width: 25px;
   display: inline-block;
 }
+
 .plus_sign span:first-of-type {
   display: inline-block;
   width: 25px;
   height: 3px;
   background-color: #fff;
 }
+
 .plus_sign span:last-of-type {
   display: inline-block;
   width: 3px;
   height: 25px;
   background-color: #fff;
 }
+
 .questions_label {
   display: block;
   width: 70%;
@@ -874,10 +889,12 @@ p.label {
   cursor: pointer;
   color: var(--white);
 }
+
 .questions_container {
   transition: all 0.4s ease-in-out;
   max-height: 1.4rem;
 }
+
 .questions_label p {
   transition: all 0.5s ease-in-out;
   visibility: hidden;
@@ -886,20 +903,25 @@ p.label {
   color: var(--white);
   line-height: 33px;
 }
+
 .questions_label input {
   display: none;
 }
+
 .questions_label input:checked + .questions_container .plus_sign {
   display: none;
 }
+
 .questions_label input:checked + .questions_container .minus_sign {
   display: inline-block;
 }
+
 .questions_label input:checked ~ .questions_container p {
   visibility: visible;
   opacity: 1;
   display: inline-block;
 }
+
 .questions_label input:checked ~ .questions_container {
   max-height: 56rem;
 }
@@ -908,6 +930,7 @@ p.label {
   justify-content: space-between;
   align-items: center;
 }
+
 .questions_container h4 {
   font-size: 24px;
   margin: 0;
@@ -925,6 +948,12 @@ p.label {
   }
   .faq p {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq .section-description {
+    font-size: 18px;
   }
 }
 

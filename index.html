@@ -20,7 +20,7 @@
           <li><a class="navbar__link" href="#">About</a></li>
         </ul>
       </nav>
-      <a class="btn-secondary" href="#"
+      <a class="btn-secondary" href="#generate-aview"
         ><div class="shadow"></div>
         Contact Us</a
       >
@@ -45,7 +45,7 @@
             AVIEW is a leading multi-media translation service. We help you
             expand your international viewership.
           </p>
-          <a class="btn-primary" href="#"
+          <a class="btn-primary" href="#generate-aview"
             ><div class="shadow"></div>
             Start Now!</a
           >
@@ -108,7 +108,7 @@
             brand. Our team is ready to help you gain a AVIEW on your
             competition.
           </p>
-          <a href="" class="btn-primary"
+          <a href="#generate-aview" class="btn-primary"
             ><div class="shadow"></div>
             Go Global Now!</a
           >
@@ -247,7 +247,7 @@
             <p class="creators__name">Mark Rober</p>
           </div>
         </div>
-        <a href="" class="btn-primary"
+        <a href="#generate-aview" class="btn-primary"
           ><div class="shadow"></div>
           Become a Creator</a
         >
@@ -301,11 +301,22 @@
         </div>
       </section>
 
-      <section class="generate-aview m-horizontal">
+      <section class="generate-aview m-horizontal" id="generate-aview">
         <h2 class="section-title">
           <span class="gradient-text">Start Generating AVIEW Today!</span>
         </h2>
-        <form action="" class="generate-form">
+        <form
+          name="contact"
+          method="POST"
+          class="generate-form"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+        >
+          <div class="hidden">
+            <label>
+              Don't fill this out if you're human: <input name="bot-field" />
+            </label>
+          </div>
           <label for="name" class="label">Name</label>
           <div class="input-border">
             <input
@@ -313,6 +324,7 @@
               placeholder="Your name"
               class="input"
               id="name"
+              name="name"
             />
           </div>
           <label for="channel-link" class="label">Channel Link</label>
@@ -322,6 +334,7 @@
               placeholder="URL to your social media channel"
               class="input"
               id="channel-link"
+              name="channel-link"
             />
           </div>
           <label for="email" class="label">Email Address</label>
@@ -331,6 +344,7 @@
               placeholder="Your email address"
               class="input"
               id="email"
+              name="email"
             />
           </div>
           <label for="languages" class="label"
@@ -342,11 +356,12 @@
               placeholder="Input language(s) of interest"
               class="input"
               id="languages"
+              name="languages"
             />
           </div>
           <p class="label">Services</p>
           <label class="checkbox_label">
-            <input type="checkbox" />
+            <input type="checkbox" name="translations-and-subtitles" />
             <span> Translations/Subtitles</span>
             <span class="checkbox_span">
               <span></span>
@@ -354,7 +369,7 @@
             <img src="./img/info-icon.svg" alt="info" />
           </label>
           <label class="checkbox_label">
-            <input type="checkbox" />
+            <input type="checkbox" name="dubbing" />
             Dubbing
             <span class="checkbox_span">
               <span></span>
@@ -362,17 +377,17 @@
             <img src="./img/info-icon.svg" alt="info" />
           </label>
           <label class="checkbox_label">
-            <input type="checkbox" />
+            <input type="checkbox" name="shorts" />
             Shorts
             <span class="checkbox_span">
               <span></span>
             </span>
             <img src="./img/info-icon.svg" alt="info" />
           </label>
-          <a class="btn-secondary" href="#"
-            ><div class="shadow"></div>
-            Join Now!</a
-          >
+          <button type="submit" class="btn-secondary" href="#">
+            <div class="shadow"></div>
+            Join Now!
+          </button>
         </form>
       </section>
 
