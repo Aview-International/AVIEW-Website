@@ -664,6 +664,11 @@ section:not(:last-of-type) {
   height: 327px;
   background: var(--card-fill-gradient);
 }
+.videos__video video {
+  border-radius: 15px;
+  height: 100%;
+  width: 100%;
+}
 
 @media (max-width: 1200px) {
   .videos {
@@ -816,6 +821,9 @@ p.label {
   .generate-aview .section-title {
     margin-bottom: 50px;
   }
+  .horizontal_line {
+    width: 95%;
+  }
 }
 
 /* FAQ */
@@ -862,13 +870,13 @@ p.label {
 .questions_label {
   display: block;
   width: 70%;
-  margin: auto;
+  margin: 1.5rem auto;
   cursor: pointer;
   color: var(--white);
 }
 .questions_container {
-  transition: height 0.3s ease-in-out;
-  height: 1.4rem;
+  transition: all 0.4s ease-in-out;
+  max-height: 1.4rem;
 }
 .questions_label p {
   transition: all 0.5s ease-in-out;
@@ -876,6 +884,7 @@ p.label {
   opacity: 0;
   padding: 30px 0;
   color: var(--white);
+  line-height: 33px;
 }
 .questions_label input {
   display: none;
@@ -892,8 +901,9 @@ p.label {
   display: inline-block;
 }
 .questions_label input:checked ~ .questions_container {
-  height: 8rem;
+  max-height: 56rem;
 }
+
 .questions_container > div {
   justify-content: space-between;
   align-items: center;
@@ -901,6 +911,21 @@ p.label {
 .questions_container h4 {
   font-size: 24px;
   margin: 0;
+}
+@media (max-width: 768px) {
+  .questions_label {
+    width: 90%;
+  }
+  .questions_container {
+    max-height: 3.1rem;
+  }
+  .questions_container h4 {
+    font-size: 21px;
+    line-height:28px;
+  }
+  .faq p {
+    font-size: 16px;
+  }
 }
 
 /* Want To Go Global */
